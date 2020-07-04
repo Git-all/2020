@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--pom.xml主要描述了项目的maven坐标，该文件用于管理：源代码、配置文件、开发者的信-->
+<!--        息和角色、问题追踪系统、组织信息、项目授权、项目的url、项目的依赖关系等等。是项目级别的配置文件-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<!--    pom版本标签-->
+<!--    必须标签，表示是一个固定的版本，指定了当前pom的版本-->
+    <modelVersion>4.0.0</modelVersion>
+<!--    坐标信息标签    <基础设置>-->
+<!--    公司或者组织的唯一标志，通常使用全限定的包名区分该项目和其他项目。并且构建时生成的路径也是由此生成，-->
+<!--    如x.xx.xxx生成的相对路径为：/x/xx/xxx/-->
+    <groupId>org.example</groupId>
+<!--    本项目的唯一ID，一个groupId下面可能多个项目，就是靠artifactId来区分的;-->
+    <artifactId>design_patterns</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok</artifactId>
+                    <version>1.16.10</version>
+                    <scope>provided</scope>
+<!--                //标签内为test时表示该项依赖（这个jar）只能在test时起到作用，打包编译发布后不起作用-->
+<!--                //scope属性值：-->
+<!--                //compile：默认的范围，在编译测试，运行都有效，在依赖项dependency中不写，也就是不指定scope标签，即表示默认；-->
+<!--                //provided：在编译和测试的时候有效-->
+<!--                //runtime：在测试和运行时有效-->
+<!--                //test：只在测试范围内有效-->
+<!--                //system：在编译和测试是有效，与本机系统相关联，可移植性差-->
+<!--                //improt：导入的依赖范围，它只使用在dependencyManagement中，表示从其它的pom中导入dependency的配置。-->
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
